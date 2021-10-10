@@ -46,7 +46,7 @@ func (c *ChatClient) command(method string, url string, payload string) ([]byte,
 		return nil, err
 	}
 	req.Header.Add("Content-Type", "application/json")
-	req.Header.Add("X-AUTH-TOKEN", c.Token)
+	req.Header.Add("X-API-KEY", c.Token)
 
 	res, err := client.Do(req)
 	if err != nil {
